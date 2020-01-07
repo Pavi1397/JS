@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+    <form action="submitted.html" onsubmit="return val1()">
+        Enter name: <input type="text" id="t1" value="" onchange="val1()">
+        Enter password: <input type="password" id="p1" value="" onchange="val1()">
+        <input type="submit" id = "sub1" disabled>
+    </form>
+    <div id="d1" style="color: aqua;"></div>
+
+    <script>
+    function val1()
+    {
+        var t1=document.getElementById("t1");
+        var p1=document.getElementById("p1");
+       
+        var x = true;
+        if(t1.value=='')
+        {
+            x = false;
+        }
+        if(p1.value=='')
+        {
+            x = false;
+        }
+       if(x) {
+           document.getElementById("sub1").disabled = false;
+       }  
+    }
+    </script>
+</body>
+</html>
